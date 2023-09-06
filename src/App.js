@@ -1,21 +1,15 @@
-import logo from "./logo.svg";
-import "./App.css";
-import { Button } from "antd";
+import Board from "./pages/board";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   // const value = history;
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>React Dev Framework.</p>
-        <div>
-          <Button>Link 1</Button>
-          <Button>Link 2</Button>
-        </div>
-      </header>
-    </div>
+    <Routes>
+      <Route exact path="/app" Component={Board}></Route>
+      <Route exact path="/board"></Route>
+      <Route exact path="/list"></Route>
+    </Routes>
   );
 }
 
