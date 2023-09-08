@@ -1,3 +1,3 @@
-const getUriPath = (basename, uri) => {
+export const getUriPath = (basename, uri) => {
     return basename+uri;
 }

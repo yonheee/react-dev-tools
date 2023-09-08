@@ -1,6 +1,6 @@
-import logo from "../../logo.svg";
-import "../../App.css";
-import "../../component/atoms/Atoms.css";
+import logo from "../../../logo.svg";
+import "../../../App.css";
+import "../../atoms/Atoms.css";
 import { Button } from "antd";
 
 function Board() {
