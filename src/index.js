@@ -4,12 +4,17 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
+import "./App.css";
+import { AppStyle } from "./AppStyle";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
+  <AppStyle>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </AppStyle>
 );
 
 reportWebVitals();
