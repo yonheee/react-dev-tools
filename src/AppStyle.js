@@ -8,6 +8,8 @@ export const AppStyle = styled.div`
     color: #d4dfe6;
     border-radius: 10px;
   }
+
+  /* Navbar Start */
   .navbar {
     padding-bottom: 1px;
     border-bottom: solid 1px #e8e8e8;
