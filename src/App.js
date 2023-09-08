@@ -1,14 +1,16 @@
-import Board from "./pages/board";
+import Board from "./component/pages/board";
 import { Routes, Route } from "react-router-dom";
+import {getUriPath} from "./common/util"
 
 function App() {
-  // const value = history;
+  // Main App Routing Class.
+  const basename = "/app";
 
   return (
     <Routes>
-      <Route exact path="/app" Component={Board}></Route>
-      <Route exact path="/board"></Route>
-      <Route exact path="/list"></Route>
+      <Route exact path={getUriPath(basename, "/board")} Component={Board}></Route>
+      <Route exact path="/ftp"></Route>
+      <Route exact path="/ftp"></Route>
     </Routes>
   );
 }
