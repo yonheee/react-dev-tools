@@ -1,7 +1,11 @@
 import Board from "./component/pages/board";
-import { Routes, Route } from "react-router-dom";
+import Ftp from "./component/pages/ftp";
+import Config from "./component/pages/config";
+import { Routes, Route, Link } from "react-router-dom";
 import { getUriPath } from "./common/util";
-import { Fragment } from "react";
+import { Component, Fragment } from "react";
+import { Button } from "antd";
+import Navbar from "./component/basic/header";
 
 function App() {
   // Main App Routing Class.
@@ -9,15 +13,26 @@ function App() {
   const basename = "/app";
 
   return (
-    <Routes>
-      <Route
-        exact
-        path={getUriPath(basename, "/board")}
-        Component={Board}
-      ></Route>
-      <Route exact path={getUriPath(basename, "/config")}></Route>
-      <Route exact path={getUriPath(basename, "/ftp")}></Route>
-    </Routes>
+    <>
+      <Navbar></Navbar>
+      <Routes>
+        <Route
+          exact
+          path={getUriPath(basename, "/board")}
+          Component={Board}
+        ></Route>
+        <Route
+          exact
+          path={getUriPath(basename, "/ftp")}
+          Component={Ftp}
+        ></Route>
+        <Route
+          exact
+          path={getUriPath(basename, "/config")}
+          Component={Config}
+        ></Route>
+      </Routes>
+    </>
   );
 }
 

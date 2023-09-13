@@ -1,5 +1,9 @@
-function ftp() {
-  return null;
+function Ftp() {
+  return (
+    <div>
+      <p>FTP</p>
+    </div>
+  );
 }
 
-export default ftp;
+export default Ftp;

@@ -3,7 +3,7 @@ import { Layout, Button, Drawer } from "antd";
 import LeftMenu from "./LeftMenu";
 import RightMenu from "./RightMenu";
 import { MenuOutlined } from "@ant-design/icons";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
@@ -21,15 +21,17 @@ const Navbar = () => {
       <Layout>
         <Layout.Header className="nav-header">
           <div className="logo">
-            <h3 className="brand-font">Brand Here</h3>
+            <h3 className="brand-font">
+              <Link to="/">HOME</Link>
+            </h3>
           </div>
           <div className="navbar-menu">
             <div className="leftMenu">
               <LeftMenu mode={"horizontal"} />
             </div>
-            <Button className="menuButton" type="text" onClick={showDrawer}>
+            {/* <Button className="menuButton" type="text" onClick={showDrawer}>
               <MenuOutlined />
-            </Button>
+            </Button> */}
             <div className="rightMenu">
               <RightMenu mode={"horizontal"} />
             </div>
