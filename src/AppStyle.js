@@ -9,6 +9,10 @@ export const AppStyle = styled.div`
     border-radius: 10px;
   }
 
+  .board-table {
+    margin: 20px;
+  }
+
   /* Navbar Start */
   .navbar {
     padding-bottom: 1px;
