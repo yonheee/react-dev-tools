@@ -1,5 +1,5 @@
 import "../../../App.css";
-import { Radio, Divider, Table } from "antd";
+import { Radio, Divider, Table, Button } from "antd";
 
 const columns = [
   {
@@ -47,12 +47,19 @@ const data = [
 function Board() {
   return (
     <div>
-      <Table
-        className="board-table"
-        rowSelection={{ type: "checkbox" }}
-        columns={columns}
-        dataSource={data}
-      />
+      <div>
+        <Button type="primary" style={{ marginLeft: "20px" }}>
+          전체 삭제
+        </Button>
+      </div>
+      <div>
+        <Table
+          className="board-table"
+          rowSelection={{ type: "checkbox" }}
+          columns={columns}
+          dataSource={data}
+        />
+      </div>
     </div>
   );
 }
