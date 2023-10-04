@@ -1,10 +1,8 @@
 import Board from "./component/pages/board";
 import Ftp from "./component/pages/ftp";
 import Config from "./component/pages/config";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { getUriPath } from "./common/util";
-import { Component, Fragment } from "react";
-import { Button } from "antd";
 import Navbar from "./component/basic/header";
 
 function App() {
@@ -19,17 +17,17 @@ function App() {
         <Route
           exact
           path={getUriPath(basename, "/board")}
-          Component={Board}
+          element={<Board />}
         ></Route>
         <Route
           exact
           path={getUriPath(basename, "/ftp")}
-          Component={Ftp}
+          element={<Ftp />}
         ></Route>
         <Route
           exact
           path={getUriPath(basename, "/config")}
-          Component={Config}
+          element={<Config />}
         ></Route>
       </Routes>
     </>

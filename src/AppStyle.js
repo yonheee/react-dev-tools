@@ -13,6 +13,22 @@ export const AppStyle = styled.div`
     margin: 20px;
   }
 
+  .option-container {
+    display: flex;
+  }
+
+  .align-left {
+    display: flex;
+    justify-content: default;
+    width: 50%;
+  }
+
+  .align-right {
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+  }
+
   /* Navbar Start */
   .navbar {
     padding-bottom: 1px;

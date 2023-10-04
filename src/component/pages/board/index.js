@@ -1,10 +1,17 @@
 import "../../../App.css";
-import { Radio, Divider, Table, Button } from "antd";
+import { Table, Button, Input } from "antd";
 
 const columns = [
   {
+    title: "No.",
+    dataIndex: "rowIndex",
+    render: (text, record, index) => {
+      return index + 1;
+    },
+  },
+  {
     title: "HOST NAME",
-    dataIndex: "host_name",
+    dataIndex: "hostname",
     render: (text: string) => <a>{text}</a>,
   },
   {
@@ -15,30 +22,39 @@ const columns = [
     title: "ROOT",
     dataIndex: "root",
   },
+  {
+    title: "EDIT",
+    dataIndex: "edit",
+    render: () => <Button type="primary">edit</Button>,
+  },
 ];
 
 const data = [
   {
     key: "1",
-    host_name: "SYSTEM A",
+    rowIndex: "1",
+    hostname: "SYSTEM A",
     ip: "127.0.0.1",
     root: "home/app/user",
   },
   {
     key: "2",
-    host_name: "SYSTEM B",
+    rowIndex: "2",
+    hostname: "SYSTEM B",
     ip: "127.0.0.1",
     root: "home/app/user",
   },
   {
     key: "3",
-    host_name: "SYSTEM C",
+    rowIndex: "3",
+    hostname: "SYSTEM C",
     ip: "127.0.0.1",
     root: "home/admin/app",
   },
   {
     key: "4",
-    host_name: "SYSTEM D",
+    rowIndex: "4",
+    hostname: "SYSTEM D",
     ip: "127.0.0.1",
     root: "home/admin/app",
   },
@@ -47,10 +63,24 @@ const data = [
 function Board() {
   return (
     <div>
-      <div>
-        <Button type="primary" style={{ marginLeft: "20px" }}>
-          전체 삭제
-        </Button>
+      <div className="option-container">
+        <div className="align-left">
+          <Button type="primary" style={{ marginLeft: "20px" }}>
+            전체 삭제
+          </Button>
+        </div>
+        <div className="align-right">
+          <Input
+            style={{ width: "50%" }}
+            placeholder="Input Your Option."
+          ></Input>
+          <Button
+            type="primary"
+            style={{ marginRight: "20px", marginLeft: "20px" }}
+          >
+            search
+          </Button>
+        </div>
       </div>
       <div>
         <Table
