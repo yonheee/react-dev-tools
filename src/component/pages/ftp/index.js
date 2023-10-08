@@ -26,24 +26,28 @@ const columns = [
 
 const data = [
   {
+    key: "1",
     rowIndex: "1",
     hostname: "SYSTEM A",
     ip: "127.0.0.1",
     root: "home/app/user",
   },
   {
+    key: "2",
     rowIndex: "2",
     hostname: "SYSTEM B",
     ip: "127.0.0.1",
     root: "home/app/user",
   },
   {
+    key: "3",
     rowIndex: "3",
     hostname: "SYSTEM C",
     ip: "127.0.0.1",
     root: "home/admin/app",
   },
   {
+    key: "4",
     rowIndex: "4",
     hostname: "SYSTEM D",
     ip: "127.0.0.1",

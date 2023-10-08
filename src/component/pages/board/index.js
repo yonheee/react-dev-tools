@@ -72,6 +72,10 @@ function Board() {
   const [selectedIndex, setSelectedIndex] = useState(null);
   const [edited, setEdited] = useState(false);
 
+  useEffect(() => {
+    setIsModalOpen(false);
+  }, []);
+
   const showModal = (index) => {
     setIsModalOpen(true);
     setSelectedIndex(index);
@@ -107,24 +111,24 @@ function Board() {
         <Table
           className="board-table"
           rowSelection={{ type: "checkbox" }}
-          onRow={(record, index) => {
-            return {
-              onClick: showModal(index),
-            };
-          }}
           columns={columns}
           dataSource={data}
+          onRow={(record, index) => {
+            return {
+              onClick: () => showModal(index),
+            };
+          }}
         />
-        <Modal
-          title="HOST EDIT"
-          open={isModalOpen}
-          onOk={handleOk}
-          onCancel={handleCancel}
-        >
-          <p>HOST NAME</p>
-          <Input placeholder="Input New Host Name."></Input>
-        </Modal>
       </div>
+      <Modal
+        title="HOST EDIT"
+        open={isModalOpen}
+        onOk={handleOk}
+        onCancel={handleCancel}
+      >
+        <p>HOST NAME</p>
+        <Input placeholder="Input New Host Name."></Input>
+      </Modal>
     </div>
   );
 }
