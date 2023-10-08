@@ -9,7 +9,7 @@ const RightMenu = ({ mode }) => {
         title={
           <>
             <Avatar icon={<UserOutlined />} />
-            <span className="username">yonhee</span>
+            <span className="username"> yonhee</span>
           </>
         }
       >

@@ -29,14 +29,12 @@ const Navbar = () => {
             <div className="leftMenu">
               <LeftMenu mode={"horizontal"} />
             </div>
-            {/* <Button className="menuButton" type="text" onClick={showDrawer}>
-              <MenuOutlined />
-            </Button> */}
+
             <div className="rightMenu">
               <RightMenu mode={"horizontal"} />
             </div>
 
-            <Drawer
+            {/* <Drawer
               title={"Brand Here"}
               placement="right"
               closable={true}
@@ -46,7 +44,7 @@ const Navbar = () => {
             >
               <LeftMenu mode={"inline"} />
               <RightMenu mode={"inline"} />
-            </Drawer>
+            </Drawer> */}
           </div>
         </Layout.Header>
       </Layout>

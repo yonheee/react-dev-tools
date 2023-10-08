@@ -122,10 +122,10 @@ export const AppStyle = styled.div`
       margin-right: 10px;
     }
 
-    .leftMenu,
-    .rightMenu {
-      display: none;
-    }
+    // .leftMenu,
+    // .rightMenu {
+    //   display: none;
+    // }
 
     .logo a {
       margin-left: -10px;

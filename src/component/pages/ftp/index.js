@@ -1,5 +1,5 @@
 import "../../../App.css";
-import { Table, Button } from "antd";
+import { Table, Button, Input } from "antd";
 
 const columns = [
   {
@@ -26,28 +26,24 @@ const columns = [
 
 const data = [
   {
-    key: "1",
     rowIndex: "1",
     hostname: "SYSTEM A",
     ip: "127.0.0.1",
     root: "home/app/user",
   },
   {
-    key: "2",
     rowIndex: "2",
     hostname: "SYSTEM B",
     ip: "127.0.0.1",
     root: "home/app/user",
   },
   {
-    key: "3",
     rowIndex: "3",
     hostname: "SYSTEM C",
     ip: "127.0.0.1",
     root: "home/admin/app",
   },
   {
-    key: "4",
     rowIndex: "4",
     hostname: "SYSTEM D",
     ip: "127.0.0.1",
@@ -58,16 +54,27 @@ const data = [
 function Ftp() {
   return (
     <div>
-      <div className="align-left">
-        <Button type="primary" style={{ marginLeft: "20px" }}>
-          검증
-        </Button>
-        <Button type="primary" style={{ marginLeft: "20px" }}>
-          선택 전송
-        </Button>
-        <Button type="primary" style={{ marginLeft: "20px" }}>
-          전체 전송
-        </Button>
+      <div className="option-container">
+        <div className="align-left">
+          <Button type="primary" style={{ marginLeft: "20px" }}>
+            검증
+          </Button>
+          <Button type="primary" style={{ marginLeft: "20px" }}>
+            전송
+          </Button>
+        </div>
+        <div className="align-right">
+          <Input
+            style={{ width: "50%" }}
+            placeholder="Input Your Option."
+          ></Input>
+          <Button
+            type="primary"
+            style={{ marginRight: "20px", marginLeft: "20px" }}
+          >
+            search
+          </Button>
+        </div>
       </div>
       <div>
         <Table
